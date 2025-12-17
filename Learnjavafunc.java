@@ -72,31 +72,73 @@ public class Learnjavafunc {
     // }
 
     //Any baser to decimal
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        System.out.println("Enter the number: ");
-        int n = scn.nextInt();
-        System.out.println("Enter the base number: ");
-        int b = scn.nextInt();
-        int res = getDecimal(n, b);
-        System.out.println(res);
-    }
+    // public static void main(String[] args) {
+    //     Scanner scn = new Scanner(System.in);
+    //     System.out.println("Enter the number: ");
+    //     int n = scn.nextInt();
+    //     System.out.println("Enter the base number: ");
+    //     int b = scn.nextInt();
+    //     int res = getDecimal(n, b);
+    //     System.out.println(res);
+    // }
 
-    public static int getDecimal(int n, int b){
-        int rv = 0;
-        int p = 1;
-        while(n > 0){
-            int dig = n % 10;
-            n = n/10;
-            rv += dig * p;
-            p  = p * b;
-        }
+    // public static int getDecimal(int n, int b){
+    //     int rv = 0;
+    //     int p = 1;
+    //     while(n > 0){
+    //         int dig = n % 10;
+    //         n = n/10;
+    //         rv += dig * p;
+    //         p  = p * b;
+    //     }
 
-        return rv;
-    }
+    //     return rv;
+    // }
+
+    //any base to any base
+    // public static void main(String[] args) {
+    //     Scanner scn = new Scanner(System.in);
+    //     int n = scn.nextInt();
+    //     int b1 = scn.nextInt();
+    //     int b2 = scn.nextInt();
+    //     int d = any2any(n, b1, b2);
+    //     System.out.println(d);
+    // }
+
+    // public static int getInBase(int n, int b){
+    //     int rv = 0;
+    //     int p = 1;
+    //     while(n > 0) {
+    //         int dig = n % b;
+    //         n = n/b;
+    //         rv += dig * p;
+    //         p = p * 10;
+    //     }
+
+    //     return rv;
+    // }
+    // public static int getDecimal(int n, int b){
+    //     int rv = 0;
+    //     int p = 1;
+    //     while(n > 0){
+    //         int dig = n % 10;
+    //         n = n/10;
+    //         rv += dig * p;
+    //         p  = p * b;
+    //     }
+
+    //     return rv;
+    // }
+    // public static int any2any(int n, int b1, int b2) {
+    //     int dec = getDecimal(n, b1);
+    //     int dn = getInBase(dec, b2);
+    //     return dn;
+    // }
+
+    
 
 
-
+    
 
 
 }
