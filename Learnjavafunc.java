@@ -135,7 +135,36 @@ public class Learnjavafunc {
     //     return dn;
     // }
 
+    // any base addition
+    // public static void main(String[] args) {
+    //     Scanner scn = new Scanner(System.in);
+    //     int n1 = scn.nextInt();
+    //     int b = scn.nextInt();
+    //     int n2 = scn.nextInt();
+
+    //     int addn = addAnyBase(n1, b, n2);
+    //     System.out.println(addn);
+    // }
+
+    // public static int addAnyBase(int n1, int b, int n2){
+    //     int rv = 0;
+    //     int dig = 0;
+    //     int ca = 0;
+    //     int p = 1;
+    //     while (n2 > 0 || ca > 0){
+    //         dig = (n1%10) + (n2%10) + ca;
+    //         n1 = n1/10;
+    //         n2 = n2/10;
+    //         rv += dig%b * p;
+    //         ca = dig/b;
+    //         p = p * 10;
+    //     }
+    //     return rv;
+        
+    // }
+
     
+
 
 
     
