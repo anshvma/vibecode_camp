@@ -163,7 +163,44 @@ public class Learnjavafunc {
         
     // }
 
-    
+    //any Base Subtraction
+    // public static void main(String[] args) {
+    //     Scanner scn = new Scanner(System.in);
+    //     int n1 = scn.nextInt();
+    //     int n2 = scn.nextInt();
+    //     int b = scn.nextInt();
+    //     int dr = anyBaseSub(n1, n2, b);
+    //     System.out.println(dr);
+    // }
+    // public static int anyBaseSub(int n1, int n2, int b){
+    //     int rv = 0;
+    //     int dig = 0;
+    //     int dig2 = 0;
+    //     int c = 0;
+    //     int d= 0;
+    //     int p = 1;
+    //     while(n2 > 0){
+    //         dig = n1%10;
+    //         dig2 = n2%10;
+    //         n1 = n1/10;
+    //         n2 = n2/10;
+    //         dig = dig + c;
+    //         if (dig >= dig2){
+    //             c = 0;
+    //             d = dig - dig2;
+    //         } else{
+    //             c = -1;
+    //             d = dig + b - dig2;
+    //         }
+    //         rv += d * p;
+    //         p = p * 10;
+    //     }
+
+    //     return rv;
+    // }
+
+
+
 
 
 
