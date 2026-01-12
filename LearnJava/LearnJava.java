@@ -1,3 +1,4 @@
+package LearnJava;
 import java.util.Scanner; //using all package may can cause runtime error
 
 public class LearnJava {

@@ -1,3 +1,4 @@
+package LearnJava;
 import java.util.Scanner;
 
 public class Learnjavafunc {
