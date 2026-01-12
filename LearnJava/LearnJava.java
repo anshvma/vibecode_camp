@@ -1,11 +1,11 @@
 package LearnJava;
-import java.util.Scanner; //using all package may can cause runtime error
+// import java.util.Scanner; //using all package may can cause runtime error
 
 public class LearnJava {
 
-    public static void main(String[] args) {
+    // public static void main(String[] args) {
 
-        Scanner scn_num = new Scanner(System.in);
+    //     Scanner scn_num = new Scanner(System.in);
 
         // int a = 5;
         // int b = 3;
@@ -635,13 +635,7 @@ public class LearnJava {
         //     }
         //     System.out.println();
         // }
-
-
-
-
-
-
-    }
+    // }
 
 
 

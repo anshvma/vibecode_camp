@@ -1,5 +1,5 @@
 package LearnJava;
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class Learnjavafunc {
     // (npr function- permutaion and combinaton)
