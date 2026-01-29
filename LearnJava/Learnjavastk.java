@@ -515,9 +515,57 @@ public class Learnjavastk {
     //     }
     // }
 
+    //prefix Evaluation
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     String exp = br.readLine();
+
+        // Stack<String> ifix = new Stack<>();
+        // Stack<String> pfix = new Stack<>();
+        // Stack<Integer> vals = new Stack<>();
+
+        // for(int i = exp.length() - 1; i >= 0; i--){
+        //     char ch = exp.charAt(i);
+        //     if(ch == '+' || ch == '-' || ch == '*' || ch == '/'){
+        //         int v1 = vals.pop();
+        //         int v2 = vals.pop();
+        //         int val = operation(v1, v2, ch);
+        //         vals.push(val);
+
+        //         String iv1 = ifix.pop();
+        //         String iv2 = ifix.pop();
+        //         String ival = "(" + iv1 + ch + iv2 + ")";
+        //         ifix.push(ival);
+
+        //         String pv1 = pfix.pop();
+        //         String pv2 = pfix.pop();
+        //         String pval = pv1 + pv2 + ch;
+        //         pfix.push(pval);
+        //     } else{
+        //         vals.push(ch - '0');
+        //         pfix.push(ch + "");
+        //         ifix.push(ch + "");
+        //     }
+        // }
+
+    //     System.out.println(vals.pop());
+    //     System.out.println(ifix.pop());
+    //     System.out.println(pfix.pop());
+
+    // }
+    //  public static int operation(int v1, int v2, char op){
+    //     if(op == '+'){
+    //         return v1 + v2;
+    //     } else if (op == '-'){
+    //         return v1 - v2;
+    //     } else if (op == '*'){
+    //         return v1 * v2;
+    //     } else {
+    //         return v1 / v2;
+    //     }
+    // }
+
     
-
-
 
 
 
