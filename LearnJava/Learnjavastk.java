@@ -565,6 +565,52 @@ public class Learnjavastk {
     //     }
     // }
 
+    //Celebrity problem
+    // public static void main(String[] args) throws Exception{
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     int n = Integer.parseInt(br.readLine());
+    //     int [][] arr = new int[n][n];
+
+    //     for(int x = 0; x < n; x++){
+    //         String line = br.readLine();
+    //         for(int y = 0; y < n; y++){
+    //             arr[x][y] = line.charAt(y) - '0';
+    //         }
+    //     }
+    //     findCelebrity(arr);
+    // }
+
+    // public static void findCelebrity(int[][] arr){
+    //     Stack<Integer> st = new Stack<>();
+    //     for(int i = 0; i < arr.length; i++){
+    //         st.push(i);
+    //     }
+
+    //     while(st.size() >= 2){
+    //         int i = st.pop();
+    //         int j = st.pop();
+
+    //         if(arr[i][j] == 1){
+    //             //if i knows j -> i is not a celebrity
+    //             st.push(j);
+    //         } else{
+    //             //if i doesn't know j -> j is not a celebrity
+    //             st.push(i);
+    //         }
+    //     }
+
+    //     int pos = st.pop();
+    //     for(int i = 0; i < arr.length; i++){
+    //         if(i != pos){
+    //             if(arr[i][pos] == 0 || arr[pos][i] == 1){
+    //                 System.out.println("None");
+    //                 return;
+    //             }
+    //         }
+    //     }
+    //     System.out.println(pos);
+    // }
+
     
 
 
