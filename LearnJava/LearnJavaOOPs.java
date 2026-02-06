@@ -5,15 +5,26 @@ import java.io.*;
 
 public class LearnJavaOOPs {
     //OOPs Intro
-    public static class Person {
-        int age;
-        String name;
+    // public static class Person {
+    //     int age;
+    //     String name;
 
-        void saysHi(){
-            System.out.println(name + " is " + age + " Years old, Says Hi!");
-        }
+    //     void saysHi(){
+    //         System.out.println(name + " is " + age + " Years old, Says Hi!");
+    //     }
         
-    }
+        //if you not provide constructor java will use its own constructor
+        // Person(){
+            //constructor
+        // }
+
+        //parameterized
+    //     Person(int age, String name){
+    //         this.age = age;
+    //         this.name = name;
+    //     }
+
+    // }
 
     // public static void main(String[] args) {
     //     Person p1 = new Person();
@@ -25,6 +36,10 @@ public class LearnJavaOOPs {
     //     p2.age = 16;
     //     p2.name = "Surbhi";
     //     p2.saysHi();
+
+    //     //with constructor
+    //     Person p3 = new Person(20, "Ronit");
+    //     p3.saysHi();
     // }
 
     // Swap game
@@ -54,7 +69,92 @@ public class LearnJavaOOPs {
     //     prsn2.name = name;
     // }
 
+    // Build Normal Stack
+    // public static class CustomStack{
+    //     int[] data;
+    //     int tos;
+
+    //     public CustomStack(int cap){
+    //         data = new int[cap];
+    //         tos = -1;
+    //     }
+
+    //     int size() {
+    //         return tos + 1;
+    //     }
+
+    //     void display() {
+    //         for(int i = tos; i >= 0; i--){
+    //             System.out.print(data[i] + " ");
+    //         }
+    //         System.out.println();
+    //     }
+
+    //     void push(int val) {
+    //         if(tos == data.length - 1){
+    //             System.out.println("Stack Overflow");
+    //         } else{
+    //             tos++;
+    //             data[tos] = val;
+    //         }
+    //     }
+
+    //     int pop() {
+    //         if(tos == -1){
+    //             System.out.println("Stack Underflow");
+    //             return -1;
+    //         } else {
+    //             int val = data[tos];
+    //             tos--;
+    //             return val;
+    //         }
+    //     }
+
+    //     int top() {
+    //         if(tos == -1){
+    //             System.out.println("Stack Underflow");
+    //             return -1;
+    //         } else {
+    //             int val = data[tos];
+    //             return val;
+    //         }
+    //     }
+    // }
     
+    
+    
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     int n = Integer.parseInt(br.readLine());
+    //     CustomStack st = new CustomStack(n);
+
+    //     String str = br.readLine();
+    //     while(str.equals("quit") == false){
+    //         if(str.startsWith("push")){
+    //             int val = Integer.parseInt(str.split(" ")[1]);
+    //             st.push(val);
+    //         } else if(str.startsWith("pop")){
+    //             int val = st.pop();
+    //             if(val != -1){
+    //                 System.out.println(val);
+    //             }
+    //         } else if(str.startsWith("top")){
+    //             int val = st.top();
+    //             if(val != -1){
+    //                 System.out.println(val);
+    //             }
+    //         } else if(str.startsWith("size")){
+    //             System.out.println(st.size());
+    //         } else if(str.startsWith("display")){
+    //             st.display();
+    //         }
+    //         str = br.readLine();
+    //     }
+    // }
+
+    
+
+
 
 
 
