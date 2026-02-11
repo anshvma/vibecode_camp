@@ -418,20 +418,112 @@ public class LearnJavaOOPs {
     // }
 
     // Queue Introduction
-    public static void main(String[] args) {
-        Queue<Integer> que = new ArrayDeque<>();
+    // public static void main(String[] args) {
+    //     Queue<Integer> que = new ArrayDeque<>();
 
-        que.add(10);
-        que.add(20);
-        que.add(30);
-        System.out.println(que);
+    //     que.add(10);
+    //     que.add(20);
+    //     que.add(30);
+    //     System.out.println(que);
 
-        System.out.println(que.peek());
-        System.out.println(que);
+    //     System.out.println(que.peek());
+    //     System.out.println(que);
 
-        System.out.println(que.remove());
-        System.out.println(que);        
-    }
+    //     System.out.println(que.remove());
+    //     System.out.println(que);        
+    // }
+
+    //Build Normal Queue
+    // public static class customQueue {
+    // int[] data;
+    // int front;
+    // int size;
+
+    // public customQueue(int cap){
+    //     data = new int[cap];
+    //     front = 0;
+    //     size = 0;
+    // }
+
+    // int size(){
+    //     return size;
+    // }
+
+    // void display(){
+    //     for(int i = 0; i < size; i++){
+    //         int idx = (front + i) % data.length;
+    //         System.out.print(data[idx] + " ");
+    //     }
+    //     System.out.println();
+    // }
+
+    // void add(int val){
+    //     if(size == data.length){
+    //         System.out.println("Queue Overflow");
+    //     } else {
+    //         int rear = (front + size) % data.length;
+    //         data[rear] = val;
+    //         size++;
+    //     }
+    // }
+
+    // int remove(){
+    //     if(size == 0){
+    //         System.out.println("Queue Underflow");
+    //         return -1;
+    //     } else{
+    //         int val = data[front];
+    //         front= (front + 1) % data.length;
+    //         size--;
+    //         return val;
+    //     }
+    // }
+
+    // int peek(){
+    //     if(size == 0){
+    //         System.out.println("Queue Underflow");
+    //         return -1;
+    //     } else{
+    //         return data[front];
+    //     }
+    // }
+        
+    // }
+
+    // public static void main(String[] args)throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     int n = Integer.parseInt(br.readLine());
+    //     customQueue qu = new customQueue(n);
+
+    //     String str = br.readLine();
+    //     while(str.equals("quit") == false){
+    //         if(str.startsWith("add")){
+    //             int val = Integer.parseInt(str.split(" ")[1]);
+    //             qu.add(val);
+    //         } else if(str.startsWith("remove")){
+    //             int val = qu.remove();
+    //             if(val != -1){
+    //                 System.out.println(val);
+    //             }
+    //         } else if(str.startsWith("peek")){
+    //             int val = qu.peek();
+    //             if(val != -1){
+    //                 System.out.println(val);
+    //             }
+    //         } else if(str.startsWith("size")){
+    //             System.out.println(qu.size());
+    //         } else if(str.startsWith("display")){
+    //             qu.display();
+    //         } else{
+    //             System.out.println("Write only given arguments:\n 1)add\n 2)remove\n 3)peek\n 4)size\n 5)display");
+    //         }
+    //         str = br.readLine();
+    //     }
+    // }
+
+    
+
+
 
 
 
