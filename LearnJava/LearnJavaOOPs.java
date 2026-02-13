@@ -619,9 +619,76 @@ public class LearnJavaOOPs {
     //     }
     // }
 
+    //LinkedList Introduction
+    // public static class Node {
+    //     int data;
+    //     Node next;
+    // }
+
+    // public static class Linkedlist {
+    // Node head;
+    // Node tail;
+    // int size;
+
+    // void addLast(int val){
+    //     Node temp = new Node();
+    //     temp.data = val;
+    //     temp.next = null;
+
+    //     if(size == 0) {
+    //         head = tail = temp;
+    //     } else{
+    //         tail.next = temp;
+    //         tail = temp;
+    //     }
+
+    //     size++;
+    // }
+
+    // void display(){
+    //     if(size == 0){
+    //         System.out.println("Linkedlist Underflow");
+    //     } else{
+    //         for(int i = 0; i < size; i++){
+    //         System.out.print(head.data + " ");
+    //         head = head.next;
+    //     }
+    //     }
+    // }
+        
+    // }
+
+    // public static void main(String[] args)throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     Linkedlist qu = new Linkedlist();
+
+    //     String str = br.readLine();
+    //     while(str.equals("quit") == false){
+    //         if(str.startsWith("addlast")){
+    //             int val = Integer.parseInt(str.split(" ")[1]);
+    //             qu.addLast(val);
+    //         } else if(str.startsWith("remove")){
+    //             int val = qu.remove();
+    //             if(val != -1){
+    //                 System.out.println(val);
+    //             }
+    //         } else if(str.startsWith("peek")){
+    //             int val = qu.peek();
+    //             if(val != -1){
+    //                 System.out.println(val);
+    //             }
+    //         } else if(str.startsWith("size")){
+    //             System.out.println(qu.size());
+    //         } else if(str.startsWith("display")){
+    //             qu.display();
+    //         } else{
+    //             System.out.println("Write only given arguments:\n 1)addlast\n 2)remove\n 3)peek\n 4)size\n 5)display");
+    //         }
+    //         str = br.readLine();
+    //     }
+    // }
+
     
-
-
 
 
 
