@@ -630,7 +630,11 @@ public class LearnJavaOOPs {
     // Node tail;
     // int size;
 
-    // void addLast(int val){
+    // public int size(){
+    //     return size;
+    // }
+
+    // public void addLast(int val){
     //     Node temp = new Node();
     //     temp.data = val;
     //     temp.next = null;
@@ -645,15 +649,13 @@ public class LearnJavaOOPs {
     //     size++;
     // }
 
-    // void display(){
-    //     if(size == 0){
-    //         System.out.println("Linkedlist Underflow");
-    //     } else{
-    //         for(int i = 0; i < size; i++){
-    //         System.out.print(head.data + " ");
-    //         head = head.next;
+    // public void display(){
+    //     Node temp = head;
+    //     while (temp != null) {
+    //         System.out.print(temp.data + " ");
+    //         temp = temp.next;
     //     }
-    //     }
+    //     System.out.println();
     // }
         
     // }
@@ -688,6 +690,7 @@ public class LearnJavaOOPs {
     //     }
     // }
 
+    
     
 
 
