@@ -658,6 +658,18 @@ public class LearnJavaOOPs {
     //     System.out.println();
     // }
         
+    // public void removeFirst(){
+    //     if(size == 0){
+    //         System.out.println("List is empty");
+    //     } else if(size == 1){
+    //         head = tail = null;
+    //         size--;
+    //     } else{
+    //         head = head.next;
+    //         size--;
+    //     }
+    // }
+
     // }
 
     // public static void main(String[] args)throws Exception {
@@ -669,27 +681,25 @@ public class LearnJavaOOPs {
     //         if(str.startsWith("addlast")){
     //             int val = Integer.parseInt(str.split(" ")[1]);
     //             qu.addLast(val);
-    //         } else if(str.startsWith("remove")){
-    //             int val = qu.remove();
-    //             if(val != -1){
-    //                 System.out.println(val);
-    //             }
-    //         } else if(str.startsWith("peek")){
-    //             int val = qu.peek();
-    //             if(val != -1){
-    //                 System.out.println(val);
-    //             }
+    //         } else if(str.startsWith("removefirst")){
+    //             qu.removeFirst();
+    //         // } else if(str.startsWith("peek")){
+    //         //     int val = qu.peek();
+    //         //     if(val != -1){
+    //         //         System.out.println(val);
+    //         //     }
     //         } else if(str.startsWith("size")){
     //             System.out.println(qu.size());
     //         } else if(str.startsWith("display")){
     //             qu.display();
     //         } else{
-    //             System.out.println("Write only given arguments:\n 1)addlast\n 2)remove\n 3)peek\n 4)size\n 5)display");
+    //             System.out.println("Write only given arguments:\n 1)addlast\n 2)removefirst\n 3)peek\n 4)size\n 5)display/n 6)quit");
     //         }
     //         str = br.readLine();
     //     }
     // }
 
+    
     
     
 
