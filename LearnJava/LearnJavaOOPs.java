@@ -670,6 +670,40 @@ public class LearnJavaOOPs {
     //     }
     // }
 
+    // public int getFirst(){
+    //     if(size == 0){
+    //         System.out.println("List is empty");
+    //         return -1;
+    //     } else{
+    //         return head.data;
+    //     }
+    // }
+
+    // public int getLast(){
+    //     if(size == 0){
+    //         System.out.println("List id empty");
+    //         return -1;
+    //     } else{
+    //         return tail.data;
+    //     }
+    // }
+
+    // public int getAt(int idx){
+    //     if(size == 0){
+    //         System.out.println("List is empty");
+    //         return -1;
+    //     } else if(idx < 0 || idx >= size){
+    //         System.out.println("Invalid arguments");
+    //         return -1;
+    //     } else{
+    //         Node temp = head;
+    //         for(int i = 0; i < idx; i++){
+    //             temp = temp.next;
+    //         }
+    //         return temp.data;
+    //     }
+    // }
+
     // }
 
     // public static void main(String[] args)throws Exception {
@@ -683,22 +717,27 @@ public class LearnJavaOOPs {
     //             qu.addLast(val);
     //         } else if(str.startsWith("removefirst")){
     //             qu.removeFirst();
-    //         // } else if(str.startsWith("peek")){
-    //         //     int val = qu.peek();
-    //         //     if(val != -1){
-    //         //         System.out.println(val);
-    //         //     }
+    //         } else if(str.startsWith("getfirst")){
+    //             int val = qu.getFirst();
+    //             System.out.println(val);
+    //         } else if(str.startsWith("getlast")){
+    //             int val = qu.getLast();
+    //             System.out.println(val);
+    //         } else if(str.startsWith("getat")){
+    //             int val = Integer.parseInt(str.split(" ")[1]);
+    //             System.out.println(qu.getAt(val)); 
     //         } else if(str.startsWith("size")){
     //             System.out.println(qu.size());
     //         } else if(str.startsWith("display")){
     //             qu.display();
     //         } else{
-    //             System.out.println("Write only given arguments:\n 1)addlast\n 2)removefirst\n 3)peek\n 4)size\n 5)display/n 6)quit");
+    //             System.out.println("Write only given arguments:\n 1)addlast\n 2)removefirst\n 3)getfirst\n 4)getlast\n 5)getat\n 6)display\n 7)size\n 8)quit");
     //         }
     //         str = br.readLine();
     //     }
     // }
 
+    
     
     
     
