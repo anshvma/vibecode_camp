@@ -634,6 +634,17 @@ public class LearnJavaOOPs {
     //     return size;
     // }
 
+    // public void addFirst(int val){
+    //     Node temp = new Node();
+    //     temp.data = val;
+    //     temp.next = head;
+    //     head = temp;
+    //     if(size == 0){
+    //         tail = temp;
+    //     }
+    //     size++;
+    // }
+
     // public void addLast(int val){
     //     Node temp = new Node();
     //     temp.data = val;
@@ -726,17 +737,21 @@ public class LearnJavaOOPs {
     //         } else if(str.startsWith("getat")){
     //             int val = Integer.parseInt(str.split(" ")[1]);
     //             System.out.println(qu.getAt(val)); 
+    //         } else if(str.startsWith("addfirst")){
+    //             int val = Integer.parseInt(str.split(" ")[1]);
+    //             qu.addFirst(val);
     //         } else if(str.startsWith("size")){
     //             System.out.println(qu.size());
     //         } else if(str.startsWith("display")){
     //             qu.display();
     //         } else{
-    //             System.out.println("Write only given arguments:\n 1)addlast\n 2)removefirst\n 3)getfirst\n 4)getlast\n 5)getat\n 6)display\n 7)size\n 8)quit");
+    //             System.out.println("Write only given arguments:\n 1)addlast or addfirst\n 2)removefirst\n 3)getfirst\n 4)getlast\n 5)getat\n 6)display\n 7)size\n 8)quit");
     //         }
     //         str = br.readLine();
     //     }
     // }
 
+    
     
     
     
