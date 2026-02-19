@@ -660,6 +660,29 @@ public class LearnJavaOOPs {
     //     size++;
     // }
 
+    // public void addAt(int idx, int val){
+    //     if(idx < 0 || idx > size){
+    //         System.out.println("Invalid Arguments");
+    //     } else if(idx == 0){
+    //         addFirst(val);
+    //     } else if(idx == size){
+    //         addLast(val);
+    //     } else{
+    //         Node node = new Node();
+    //         node.data = val;
+
+    //         Node temp = head;
+    //         for(int i = 0; i < idx; i++){
+    //             temp = temp.next;
+    //         }
+
+    //         node.next = temp.next;
+    //         temp.next = node;
+
+    //         size++;
+    //     }
+    // }
+
     // public void display(){
     //     Node temp = head;
     //     while (temp != null) {
@@ -740,6 +763,10 @@ public class LearnJavaOOPs {
     //         } else if(str.startsWith("addfirst")){
     //             int val = Integer.parseInt(str.split(" ")[1]);
     //             qu.addFirst(val);
+    //         } else if(str.startsWith("addat")){
+    //             int idx = Integer.parseInt(str.split(" ")[1]);
+    //             int val = Integer.parseInt(str.split(" ")[2]);
+    //             qu.addAt(idx, val);
     //         } else if(str.startsWith("size")){
     //             System.out.println(qu.size());
     //         } else if(str.startsWith("display")){
@@ -750,6 +777,8 @@ public class LearnJavaOOPs {
     //         str = br.readLine();
     //     }
     // }
+
+    
 
     
     
