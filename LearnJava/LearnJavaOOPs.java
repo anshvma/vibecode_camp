@@ -704,6 +704,24 @@ public class LearnJavaOOPs {
     //     }
     // }
 
+    // public void removeLast(){
+    //     if(size == 0){
+    //         System.out.println("List is empty");
+    //     } else if(size == 1){
+    //         head = tail = null;
+    //         size--;
+    //     } else{
+    //         Node temp = head;
+    //         for(int i =0; i < size - 2; i++){
+    //             temp = temp.next;
+    //         }
+
+    //         tail = temp;
+    //         temp.next = null;
+    //         size--;
+    //     }
+    // }
+
     // public int getFirst(){
     //     if(size == 0){
     //         System.out.println("List is empty");
@@ -751,6 +769,8 @@ public class LearnJavaOOPs {
     //             qu.addLast(val);
     //         } else if(str.startsWith("removefirst")){
     //             qu.removeFirst();
+    //         } else if(str.startsWith("removelast")){
+    //             qu.removeLast();
     //         } else if(str.startsWith("getfirst")){
     //             int val = qu.getFirst();
     //             System.out.println(val);
@@ -772,14 +792,13 @@ public class LearnJavaOOPs {
     //         } else if(str.startsWith("display")){
     //             qu.display();
     //         } else{
-    //             System.out.println("Write only given arguments:\n 1)addlast or addfirst\n 2)removefirst\n 3)getfirst\n 4)getlast\n 5)getat\n 6)display\n 7)size\n 8)quit");
+    //             System.out.println("Write only given arguments:\n 1)addlast or addfirst or addat\n 2)removefirst or removelast\n 3)getfirst\n 4)getlast\n 5)getat\n 6)display\n 7)size\n 8)quit");
     //         }
     //         str = br.readLine();
     //     }
     // }
 
     
-
     
     
     
