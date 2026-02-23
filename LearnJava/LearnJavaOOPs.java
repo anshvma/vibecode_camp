@@ -672,7 +672,7 @@ public class LearnJavaOOPs {
     //         node.data = val;
 
     //         Node temp = head;
-    //         for(int i = 0; i < idx; i++){
+    //         for(int i = 0; i < idx - 1; i++){
     //             temp = temp.next;
     //         }
 
@@ -718,6 +718,23 @@ public class LearnJavaOOPs {
 
     //         tail = temp;
     //         temp.next = null;
+    //         size--;
+    //     }
+    // }
+
+    // public void removeAt(int idx){
+    //     if(idx < 0 || idx >= size){
+    //         System.out.println("Invalid arguments");
+    //     } else if(idx == 0){
+    //         removeFirst();
+    //     } else if(idx == size - 1){
+    //         removeLast();
+    //     } else{
+    //         Node temp = head;
+    //         for(int i = 0; i < idx - 1; i++){
+    //             temp = temp.next;
+    //         }
+    //         temp.next = temp.next.next;
     //         size--;
     //     }
     // }
@@ -780,6 +797,9 @@ public class LearnJavaOOPs {
     //         } else if(str.startsWith("getat")){
     //             int val = Integer.parseInt(str.split(" ")[1]);
     //             System.out.println(qu.getAt(val)); 
+    //         } else if(str.startsWith("removeat")){
+    //             int val = Integer.parseInt(str.split(" ")[1]);
+    //             qu.removeAt(val); 
     //         } else if(str.startsWith("addfirst")){
     //             int val = Integer.parseInt(str.split(" ")[1]);
     //             qu.addFirst(val);
@@ -792,7 +812,7 @@ public class LearnJavaOOPs {
     //         } else if(str.startsWith("display")){
     //             qu.display();
     //         } else{
-    //             System.out.println("Write only given arguments:\n 1)addlast or addfirst or addat\n 2)removefirst or removelast\n 3)getfirst\n 4)getlast\n 5)getat\n 6)display\n 7)size\n 8)quit");
+    //             System.out.println("Write only given arguments:\n 1)addlast or addfirst or addat\n 2)removefirst or removelast or rempveat\n 3)getfirst\n 4)getlast\n 5)getat\n 6)display\n 7)size\n 8)quit");
     //         }
     //         str = br.readLine();
     //     }
