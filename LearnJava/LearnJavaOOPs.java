@@ -798,6 +798,22 @@ public class LearnJavaOOPs {
     //     }
     // }
 
+    // public void reversePI(){
+    //     Node prev = null;
+    //     Node curr = head;
+
+    //     while(curr != null){
+    //         Node nxt = curr.next;
+    //         curr.next = prev;
+    //         prev = curr;
+    //         curr = nxt;
+    //     }
+
+    //     Node temp = head;
+    //     head = tail;
+    //     tail = temp;
+    // }
+
     // }
 
     // public static void main(String[] args)throws Exception {
@@ -838,8 +854,10 @@ public class LearnJavaOOPs {
     //             qu.display();
     //         } else if(str.startsWith("reversedi")){
     //             qu.reverseDI();
+    //         } else if(str.startsWith("reversepi")){
+    //             qu.reversePI();
     //         } else{
-    //             System.out.println("Write only given arguments:\n 1)addlast or addfirst or addat\n 2)removefirst or removelast or rempveat\n 3)getfirst or getlast or getat\n  4)display\n 7)size\n 8)reversedi or reverse\n 9)quit");
+    //             System.out.println("Write only given arguments:\n 1)addlast or addfirst or addat\n 2)removefirst or removelast or rempveat\n 3)getfirst or getlast or getat\n  4)display\n 7)size\n 8)reversedi or reversepi\n 9)quit");
     //         }
     //         str = br.readLine();
     //     }
