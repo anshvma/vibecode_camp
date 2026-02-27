@@ -928,12 +928,74 @@ public class LearnJavaOOPs {
     //         str = br.readLine();
     //     }
 
-    // }
+    // } 
     
+    //Linked list to Queue Adapter
+    // public static class LLtoQueueAdapter{
+    //     LinkedList<Integer> list;
+
+    //     public LLtoQueueAdapter() {
+    //             list = new LinkedList<>();
+    //         }
+
+    //         int size() {
+    //             return list.size();
+    //         }
+
+    //         void push(int val){
+    //             list.addLast(val);
+    //         }
+
+    //         int pop() {
+    //             if(size() == 0){
+    //                 System.out.println("Stack Underflow");
+    //                 return -1;
+    //             } else{
+    //                 return list.removeFirst();
+    //             }
+    //         }
+
+    //         int top() {
+    //             if(size() == 0){
+    //                 System.out.println("Stack Underflow");
+    //                 return -1;
+    //             } else{
+    //                 return list.getFirst();
+    //             }
+    //         }
+    //     }
     
-    
-    
-    
+
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     LLtoQueueAdapter st = new LLtoQueueAdapter();
+
+    //     String str = br.readLine();
+    //     while(str.equals("quit") == false){
+    //         if(str.startsWith("push")){
+    //             int val = Integer.parseInt(str.split(" ")[1]);
+    //             st.push(val);
+    //         } else if(str.equals("pop")){
+    //             int x = st.pop();
+    //             System.out.println(x);
+    //         } else if(str.equals("size")){
+    //             int x = st.size();
+    //             System.out.println(x);
+    //         } else if(str.equals("top")){
+    //             int x = st.top();
+    //             System.out.println(x);
+    //         } else{
+    //             System.out.println("Invalid Argument");
+    //         }
+    //         str = br.readLine();
+    //     }
+
+    // } 
+
+
+
+
+
 
 
 
