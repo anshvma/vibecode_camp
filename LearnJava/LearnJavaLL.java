@@ -228,61 +228,90 @@ public class LearnJavaLL {
         return s.data;
     }
 
-    }
+    public static Linkedlist mergeTwoSortedLists(Linkedlist li, Linkedlist l2){
+        Node one = li.head;
+        Node two = l2.head;
 
-    public static void main(String[] args)throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Linkedlist qu = new Linkedlist();
+        Linkedlist res = new Linkedlist();
 
-        String str = br.readLine();
-        while(str.equals("quit") == false){
-            if(str.startsWith("addlast")){
-                int val = Integer.parseInt(str.split(" ")[1]);
-                qu.addLast(val);
-            } else if(str.startsWith("removefirst")){
-                qu.removeFirst();
-            } else if(str.startsWith("removelast")){
-                qu.removeLast();
-            } else if(str.startsWith("getfirst")){
-                int val = qu.getFirst();
-                System.out.println(val);
-            } else if(str.startsWith("getlast")){
-                int val = qu.getLast();
-                System.out.println(val);
-            } else if(str.startsWith("getat")){
-                int val = Integer.parseInt(str.split(" ")[1]);
-                System.out.println(qu.getAt(val)); 
-            } else if(str.startsWith("removeat")){
-                int val = Integer.parseInt(str.split(" ")[1]);
-                qu.removeAt(val); 
-            } else if(str.startsWith("addfirst")){
-                int val = Integer.parseInt(str.split(" ")[1]);
-                qu.addFirst(val);
-            } else if(str.startsWith("addat")){
-                int idx = Integer.parseInt(str.split(" ")[1]);
-                int val = Integer.parseInt(str.split(" ")[2]);
-                qu.addAt(idx, val);
-            } else if(str.startsWith("size")){
-                System.out.println(qu.size());
-            } else if(str.startsWith("display")){
-                qu.display();
-            } else if(str.startsWith("reversedi")){
-                qu.reverseDI();
-            } else if(str.startsWith("reversepi")){
-                qu.reversePI();
-            } else if(str.startsWith("mid")){
-                int val = qu.mid();
-                System.out.println(val);
-            } else if(str.startsWith("kthfromlast")){
-                int k = Integer.parseInt(str.split(" ")[1]);
-                int val = qu.kthFromLast(k);
-                System.out.println(val); 
+        while(one != null && two != null){
+            if(one.data < two.data){
+                res.addLast(one.data);
+                one = one.next;
             } else{
-                System.out.println("Write only given arguments:\n 1)addlast or addfirst or addat\n 2)removefirst or removelast or rempveat\n 3)getfirst or getlast or getat\n  4)display\n 7)size\n 8)reversedi or reversepi\n 9)kthfromlast 10)mid 11)quit");
+                res.addLast(two.data);
+                two = two.next;
             }
-            str = br.readLine();
         }
+        
+        while(one != null){
+            res.addLast(one.data);
+            one = one.next;
+        }
+        
+        while(two != null){
+            res.addLast(two.data);
+            two = two.next;
+        }
+        
+        return res;
     }
+
+    }
+
+    // public static void main(String[] args)throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     Linkedlist qu = new Linkedlist();
+
+    //     String str = br.readLine();
+    //     while(str.equals("quit") == false){
+    //         if(str.startsWith("addlast")){
+    //             int val = Integer.parseInt(str.split(" ")[1]);
+    //             qu.addLast(val);
+    //         } else if(str.startsWith("removefirst")){
+    //             qu.removeFirst();
+    //         } else if(str.startsWith("removelast")){
+    //             qu.removeLast();
+    //         } else if(str.startsWith("getfirst")){
+    //             int val = qu.getFirst();
+    //             System.out.println(val);
+    //         } else if(str.startsWith("getlast")){
+    //             int val = qu.getLast();
+    //             System.out.println(val);
+    //         } else if(str.startsWith("getat")){
+    //             int val = Integer.parseInt(str.split(" ")[1]);
+    //             System.out.println(qu.getAt(val)); 
+    //         } else if(str.startsWith("removeat")){
+    //             int val = Integer.parseInt(str.split(" ")[1]);
+    //             qu.removeAt(val); 
+    //         } else if(str.startsWith("addfirst")){
+    //             int val = Integer.parseInt(str.split(" ")[1]);
+    //             qu.addFirst(val);
+    //         } else if(str.startsWith("addat")){
+    //             int idx = Integer.parseInt(str.split(" ")[1]);
+    //             int val = Integer.parseInt(str.split(" ")[2]);
+    //             qu.addAt(idx, val);
+    //         } else if(str.startsWith("size")){
+    //             System.out.println(qu.size());
+    //         } else if(str.startsWith("display")){
+    //             qu.display();
+    //         } else if(str.startsWith("reversedi")){
+    //             qu.reverseDI();
+    //         } else if(str.startsWith("reversepi")){
+    //             qu.reversePI();
+    //         } else if(str.startsWith("mid")){
+    //             int val = qu.mid();
+    //             System.out.println(val);
+    //         } else if(str.startsWith("kthfromlast")){
+    //             int k = Integer.parseInt(str.split(" ")[1]);
+    //             int val = qu.kthFromLast(k);
+    //             System.out.println(val); 
+    //         } else{
+    //             System.out.println("Write only given arguments:\n 1)addlast or addfirst or addat\n 2)removefirst or removelast or rempveat\n 3)getfirst or getlast or getat\n  4)display\n 7)size\n 8)reversedi or reversepi\n 9)kthfromlast 10)mid 11)quit");
+    //         }
+    //         str = br.readLine();
+    //     }
+    // }
 
     // Linked list to Stack adapter (unncomment import too!)
     // public class Main {
@@ -409,5 +438,31 @@ public class LearnJavaLL {
     //     }
 
     // } 
+
+    // Merge two sorted Linked List
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    //     int n1 = Integer.parseInt(br.readLine());
+    //     Linkedlist l1 = new Linkedlist();
+    //     String[] values1 = br.readLine().split(" ");
+    //     for(int i = 0; i < n1; i++){
+    //         int d= Integer.parseInt(values1[i]);
+    //         l1.addLast(d);
+    //     }
+        
+    //     int n2 = Integer.parseInt(br.readLine());
+    //     Linkedlist l2 = new Linkedlist();
+    //     String[] values2 = br.readLine().split(" ");
+    //     for(int i = 0; i < n2; i++){
+    //         int d= Integer.parseInt(values2[i]);
+    //         l2.addLast(d);
+    //     }
+        
+    //     Linkedlist merged = Linkedlist.mergeTwoSortedLists(l1 , l2);
+    //     merged.display();
+    //     l1.display();
+    //     l2.display();
+    // }
 
 }
