@@ -257,6 +257,32 @@ public class LearnJavaLL {
         return res;
     }
 
+    public static Node midNode(Node head, Node tail){
+        Node s = head;
+        Node f = head;
+
+        while (f != tail && f.next != tail) {
+            s = s.next;
+            f = f.next.next;
+        }
+
+        return s;
+    }
+
+    public static Linkedlist mergeSort(Node head, Node tail){
+        if(head == tail){
+            Linkedlist br = new Linkedlist();
+            br.addLast(head.data);
+            return br;
+        }
+
+        Node mid = midNode(head, tail);
+        Linkedlist fsh = mergeSort(head, mid);
+        Linkedlist ssh = mergeSort(mid.next, tail);
+        Linkedlist cl = mergeTwoSortedLists(fsh, ssh);
+        return cl;
+    }
+
     }
 
     // public static void main(String[] args)throws Exception {
@@ -464,5 +490,27 @@ public class LearnJavaLL {
     //     l1.display();
     //     l2.display();
     // }
+    
+    // merge sort a list
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    //     int n1 = Integer.parseInt(br.readLine());
+    //     Linkedlist l1 = new Linkedlist();
+    //     String[] values1 = br.readLine().split(" ");
+    //     for(int i = 0; i < n1; i++){
+    //         int d= Integer.parseInt(values1[i]);
+    //         l1.addLast(d);
+    //     }
+        
+    //     Linkedlist fsl = Linkedlist.mergeSort(l1.head, l1.tail);
+    //     fsl.display();
+    //     l1.display();
+    // }
+
+    
+    
+
+
 
 }
