@@ -283,6 +283,22 @@ public class LearnJavaLL {
         return cl;
     }
 
+    public void removeDuplicates(){
+        Linkedlist res = new Linkedlist();
+
+        while(this.size() > 0){
+            int val = this.getFirst();
+            this.removeFirst();
+
+            if(res.size() == 0 || res.tail.data != val){
+                res.addLast(val);
+            }
+        }
+
+        this.head = res.head;
+        this.tail = res.tail;
+    }
+
     }
 
     // public static void main(String[] args)throws Exception {
@@ -508,8 +524,28 @@ public class LearnJavaLL {
     //     l1.display();
     // }
 
+    //Remove duplicate from a sorted list
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    //     int n1 = Integer.parseInt(br.readLine());
+    //     Linkedlist l1 = new Linkedlist();
+    //     String[] values1 = br.readLine().split(" ");
+    //     for(int i = 0; i < n1; i++){
+    //         int d= Integer.parseInt(values1[i]);
+    //         l1.addLast(d);
+    //     }
+        
+    //     l1.display();
+    //     l1.removeDuplicates();
+    //     l1.display();
+    // }
     
     
+
+
+
+
 
 
 
