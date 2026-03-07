@@ -299,6 +299,37 @@ public class LearnJavaLL {
         this.tail = res.tail;
     }
 
+    public void oddEven(){
+        Linkedlist odd = new Linkedlist();
+        Linkedlist even = new Linkedlist();
+
+        while(this.size > 0){
+            int val = this.getFirst();
+            this.removeFirst();
+
+            if(val % 2 == 0){
+                even.addLast(val);
+            } else{
+                odd.addLast(val);
+            }
+        }
+
+        if(odd.size > 0 && even.size > 0){
+            odd.tail.next = even.head;
+            this.head = odd.head;
+            this.tail = even.tail;
+            this.size = odd.size + even.size;
+        } else if(odd.size > 0){
+            this.head = odd.head;
+            this.tail = odd.tail;
+            this.size = odd.size;
+        } else if(even.size > 0){
+            this.head = even.head;
+            this.tail = even.tail;
+            this.size = even.size;
+        }
+    }
+
     }
 
     // public static void main(String[] args)throws Exception {
@@ -541,7 +572,26 @@ public class LearnJavaLL {
     //     l1.display();
     // }
     
+    // Odd Even LL
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    //     int n1 = Integer.parseInt(br.readLine());
+    //     Linkedlist l1 = new Linkedlist();
+    //     String[] values1 = br.readLine().split(" ");
+    //     for(int i = 0; i < n1; i++){
+    //         int d= Integer.parseInt(values1[i]);
+    //         l1.addLast(d);
+    //     }
+        
+    //     l1.display();
+    //     l1.oddEven();
+    //     l1.display();
+    // }
     
+    
+
+
 
 
 
