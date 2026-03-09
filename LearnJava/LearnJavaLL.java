@@ -330,6 +330,40 @@ public class LearnJavaLL {
         }
     }
 
+    public void kReverse(int k) {
+        Linkedlist prev = null;
+
+        while(this.size > 0){
+            Linkedlist curr = new Linkedlist();
+
+            if(this.size >= k){
+                for(int i = 0; i < k; i++){
+                    int val = this.getFirst();
+                    this.removeFirst();
+                    curr.addFirst(val);
+                }
+            } else {
+                int os = this.size;
+                for(int i = 0; i < os; i++){
+                    int val = this.getFirst();
+                    this.removeFirst();
+                    curr.addLast(val);
+                }
+            }
+
+            if(prev == null){
+                prev = curr;
+            } else {
+                prev.tail.next = curr.head;
+                prev.tail = curr.tail;
+                prev.size += curr.size;
+            }
+        }
+        this.head = prev.head;
+        this.tail = prev.tail;
+        this.size = prev.size;
+    }
+
     }
 
     // public static void main(String[] args)throws Exception {
@@ -589,12 +623,33 @@ public class LearnJavaLL {
     //     l1.display();
     // }
     
+    //K reverse in LL
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    //     int n1 = Integer.parseInt(br.readLine());
+    //     Linkedlist l1 = new Linkedlist();
+    //     String[] values1 = br.readLine().split(" ");
+    //     for(int i = 0; i < n1; i++){
+    //         int d= Integer.parseInt(values1[i]);
+    //         l1.addLast(d);
+    //     }
+
+    //     int k = Integer.parseInt(br.readLine());
+    //     int a = Integer.parseInt(br.readLine());
+    //     int b = Integer.parseInt(br.readLine());
+        
+    //     l1.display();
+    //     l1.kReverse(k);
+    //     l1.display();
+    //     l1.addFirst(a);
+    //     l1.addLast(b);
+    //     l1.display();
+    // }
+
+
+
     
-
-
-
-
-
 
 
 
