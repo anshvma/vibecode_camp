@@ -377,6 +377,26 @@ public class LearnJavaLL {
         System.out.println();
     }
 
+    private void reversePRHelper(Node node){
+        if(node == null){
+            return;
+        }
+        reversePRHelper(node.next);
+
+        if(node == tail){
+            //Nothing to do...
+        } else{
+            node.next.next = node;
+        }
+    }
+
+    public void reversePR(){
+        reversePRHelper(head);
+        head.next = null;
+        Node temp = head;
+        head = tail;
+        tail = temp;
+    }
     }
 
     // public static void main(String[] args)throws Exception {
@@ -679,7 +699,25 @@ public class LearnJavaLL {
     //     l1.display();
     // }
 
-    
+    //reverse LL by pointer - recursive
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    //     int n1 = Integer.parseInt(br.readLine());
+    //     Linkedlist l1 = new Linkedlist();
+    //     String[] values1 = br.readLine().split(" ");
+    //     for(int i = 0; i < n1; i++){
+    //         int d= Integer.parseInt(values1[i]);
+    //         l1.addLast(d);
+    //     }
+
+    //     l1.display();
+    //     l1.reversePR();
+    //     l1.addLast(111);
+    //     l1.addFirst(222);
+    //     l1.display();
+    // }
+
     
 
 
