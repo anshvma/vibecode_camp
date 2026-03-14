@@ -874,7 +874,68 @@ public class LearnJavaLL {
     //     }
     // }
 
-    
+    //StackToQueueAdapterRE
+    public static class StackToQueueAdapterRE {
+        Stack<Integer> mainS;
+        Stack<Integer> helperS;
+
+        public StackToQueueAdapterRE(){
+            mainS = new Stack<>();
+            helperS = new Stack<>();
+        }
+
+        int size(){
+            return mainS.size();
+        }
+
+        void add(int val){
+            while(mainS.size() > 0) {
+                helperS.push(mainS.pop());
+            }
+            mainS.push(val);
+            while(helperS.size() > 0){
+                mainS.push(helperS.pop());
+            }
+        }
+
+        int remove(){
+            if(mainS.size() == 0){
+                System.out.println("Queue Underflow");
+                return -1;
+            } else {
+                return mainS.pop();
+            }
+        }
+
+        int peek(){
+            if(mainS.size() == 0){
+                System.out.println("Queue Underflow");
+                return -1;
+            } else{
+                return mainS.peek();
+            }
+        }
+    }
+
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     StackToQueueAdapterRE sq = new StackToQueueAdapterRE();
+
+    //     String str = br.readLine();
+    //     while(str.equals("quit") == false){
+    //         if(str.startsWith("add")){
+    //             int val = Integer.parseInt(str.split(" ")[1]);
+    //             sq.add(val);
+    //         } else if(str.startsWith("remove")){
+    //             sq.remove();
+    //         } else if(str.startsWith("peek")){
+    //             System.out.println(sq.peek());
+    //         } else if(str.startsWith("size")){
+    //             System.out.println(sq.size());
+    //         }
+    //         str = br.readLine();
+    //     }
+    // }
 
 
 
