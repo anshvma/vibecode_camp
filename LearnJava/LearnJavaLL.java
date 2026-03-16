@@ -937,7 +937,82 @@ public class LearnJavaLL {
     //     }
     // }
 
+    //Stack To Queue Adapter - Add Efficient
+    public static class StackToQueueAdapterAE{
+        Stack<Integer> mainS;
+        Stack<Integer> helperS;
 
+        public StackToQueueAdapterAE(){
+            mainS = new Stack<>();
+            helperS = new Stack<>();
+        }
+
+        int size(){
+            return mainS.size();
+        }
+
+        void add(int val){
+            mainS.push(val);
+        }
+
+        int remove(){
+            if(size() == 0){
+                System.out.println("Queue Underflow");
+                return -1;
+            } else {
+                while(mainS.size() > 1){
+                    helperS.push(mainS.pop());
+                }
+
+                int val = mainS.pop();
+
+                while(helperS.size() > 0){
+                    mainS.push(helperS.pop());
+                }
+                return val;
+            }
+        }
+
+        int peek(){
+            if(size() == 0){
+                System.out.println("Queue Underflow");
+                return -1;
+            } else {
+                while(mainS.size() > 1){
+                    helperS.push(mainS.pop());
+                }
+
+                int val = mainS.pop();
+                helperS.push(val);
+
+                while(helperS.size() > 0){
+                    mainS.push(helperS.pop());
+                }
+                return val;
+            }
+        }
+    }
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     StackToQueueAdapterAE sq = new StackToQueueAdapterAE();
+
+    //     String str = br.readLine();
+    //     while(str.equals("quit") == false){
+    //         if(str.startsWith("add")){
+    //             int val = Integer.parseInt(str.split(" ")[1]);
+    //             sq.add(val);
+    //         } else if(str.startsWith("remove")){
+    //             sq.remove();
+    //         } else if(str.startsWith("peek")){
+    //             System.out.println(sq.peek());
+    //         } else if(str.startsWith("size")){
+    //             System.out.println(sq.size());
+    //         }
+    //         str = br.readLine();
+    //     }
+    // }
+
+    
 
 
 
