@@ -397,6 +397,28 @@ public class LearnJavaLL {
         head = tail;
         tail = temp;
     }
+
+    public void reverseDRhelper(Node right, int floor){
+        if(right == null){
+            return;
+        }
+
+        reverseDRhelper(right.next, floor + 1);
+
+        if(floor > size / 2){
+            int temp = right.data;
+            right.data = rleft.data;
+            rleft.data = temp;
+    
+            rleft = rleft.next;    
+        }
+    }
+
+    Node rleft;
+    public void reverseDR() {
+        rleft = head;
+        reverseDRhelper(head, 0);
+    }
     }
 
     // public static void main(String[] args)throws Exception {
@@ -1122,6 +1144,32 @@ public class LearnJavaLL {
     //         str = br.readLine();
     //     }
     // }
+
+    // Reverse a Linked List - Data Recursive
+    
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     int n1 = Integer.parseInt(br.readLine());
+    //     Linkedlist l1 = new Linkedlist();
+    //     String[] values1 = br.readLine().split(" ");
+
+    //     for(int i = 0; i < n1; i++){
+    //         int d = Integer.parseInt(values1[i]);
+    //         l1.addLast(d);
+    //     }
+
+    //     int a = Integer.parseInt(br.readLine());
+    //     int b = Integer.parseInt(br.readLine());
+
+    //     l1.display();
+    //     l1.reverseDR();
+    //     l1.addLast(a);
+    //     l1.addFirst(b);
+    //     l1.display();
+    // }
+
+    
+
 
 
 
