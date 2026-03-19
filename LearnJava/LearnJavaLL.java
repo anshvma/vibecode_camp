@@ -419,6 +419,28 @@ public class LearnJavaLL {
         rleft = head;
         reverseDRhelper(head, 0);
     }
+
+    private boolean IsPalindromeHelper(Node right){
+        if(right == null){
+            return true;
+        }
+        boolean rres = IsPalindromeHelper(right.next);
+
+        if(rres == false){
+            return false;
+        } else if(pleft.data != right.data){
+            return false;
+        } else{
+            pleft = pleft.next;
+            return true;
+        }
+    }
+    Node pleft;
+    public boolean IsPalindrome(){
+        pleft = head;
+        return IsPalindromeHelper(head);
+    }
+
     }
 
     // public static void main(String[] args)throws Exception {
@@ -1166,6 +1188,22 @@ public class LearnJavaLL {
     //     l1.addLast(a);
     //     l1.addFirst(b);
     //     l1.display();
+    // }
+
+    //Is LL palindrome?
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     int n1 = Integer.parseInt(br.readLine());
+    //     Linkedlist l1 = new Linkedlist();
+    //     String[] values1 = br.readLine().split(" ");
+
+    //     for(int i = 0; i < n1; i++){
+    //         int d = Integer.parseInt(values1[i]);
+    //         l1.addLast(d);
+    //     }
+
+    //     l1.display();
+    //     System.out.println(l1.IsPalindrome());
     // }
 
     
