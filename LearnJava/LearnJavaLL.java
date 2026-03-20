@@ -441,6 +441,27 @@ public class LearnJavaLL {
         return IsPalindromeHelper(head);
     }
 
+    private void FoldLLHelpper(Node right, int floor){
+        if(right == null){
+            return;
+        }
+        FoldLLHelpper(right.next, floor + 1);
+
+        if(floor > size / 2){
+            Node temp = rleft.next;
+            rleft.next = right;
+            right.next = temp;
+            rleft = temp;
+        } else if(floor == size / 2){
+            tail = right;
+            tail.next = null;
+        }
+    }
+    public void FoldLL(){
+        rleft = head;
+        FoldLLHelpper(head, 0);
+    }
+
     }
 
     // public static void main(String[] args)throws Exception {
@@ -1206,8 +1227,24 @@ public class LearnJavaLL {
     //     System.out.println(l1.IsPalindrome());
     // }
 
-    
+    //Fold a LL
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     int n1 = Integer.parseInt(br.readLine());
+    //     Linkedlist l1 = new Linkedlist();
+    //     String[] values1 = br.readLine().split(" ");
 
+    //     for(int i = 0; i < n1; i++){
+    //         int d = Integer.parseInt(values1[i]);
+    //         l1.addLast(d);
+    //     }
+
+    //     l1.display();
+    //     l1.FoldLL();
+    //     l1.display();
+    // }
+
+    
 
 
 
