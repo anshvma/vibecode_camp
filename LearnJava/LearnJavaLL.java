@@ -462,6 +462,41 @@ public class LearnJavaLL {
         FoldLLHelpper(head, 0);
     }
 
+    private static int addTwoListHelper(Node one, int pv1, Node two, int pv2, Linkedlist res){
+        if(one == null && two == null){
+            return 0;
+        }
+
+        int data = 0;
+        if(pv1 > pv2){
+            int oc = addTwoListHelper(one.next, pv1 - 1, two, pv2, res);
+            data = one.data + oc;
+        } else if(pv1 < pv2){
+            int oc = addTwoListHelper(one, pv1, two.next, pv2 - 1, res);
+            data = two.data + oc;
+        } else{
+            int oc = addTwoListHelper(one.next, pv1 - 1, two.next, pv2 - 1, res);
+            data = one.data + two.data + oc;
+        }
+        int nd = data % 10;
+        int nc = data / 10;
+
+        res.addFirst(nd);
+        return nc;
+
+    }
+
+    public static Linkedlist addTwoList(Linkedlist one, Linkedlist two) {
+        Linkedlist res = new Linkedlist();
+
+        int oc = addTwoListHelper(one.head, one.size, two.head, two.size, res);
+        if(oc > 0){
+            res.addFirst(oc);
+        }
+
+        return res;
+    }
+
     }
 
     // public static void main(String[] args)throws Exception {
@@ -1244,7 +1279,37 @@ public class LearnJavaLL {
     //     l1.display();
     // }
 
-    
+    //Add Two LL
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    //     int n1 = Integer.parseInt(br.readLine());
+    //     Linkedlist l1 = new Linkedlist();
+    //     String[] values1 = br.readLine().split(" ");
+    //     for(int i = 0; i < n1; i++){
+    //         int d= Integer.parseInt(values1[i]);
+    //         l1.addLast(d);
+    //     }
+        
+    //     int n2 = Integer.parseInt(br.readLine());
+    //     Linkedlist l2 = new Linkedlist();
+    //     String[] values2 = br.readLine().split(" ");
+    //     for(int i = 0; i < n2; i++){
+    //         int d= Integer.parseInt(values2[i]);
+    //         l2.addLast(d);
+    //     }
+
+    //     Linkedlist sum = Linkedlist.addTwoList(l1,l2);
+
+    //     l1.display();
+    //     l2.display();
+    //     sum.display();
+    // }
+
+
+
+
+
 
 
 
