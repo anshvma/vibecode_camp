@@ -497,6 +497,30 @@ public class LearnJavaLL {
         return res;
     }
 
+
+
+    public static int findIntersection(Linkedlist one, Linkedlist two){
+        Node t1 = one.head;
+        Node t2 = two.head;
+
+        int delta = Math.abs(one.size - two.size);
+        if(one.size > two.size){
+            for(int i = 0; i < delta; i++){
+                t1 = t1.next;
+            }
+        } else {
+            for(int i = 0; i < delta; i++){
+                t2 = t2.next;
+            }
+        }
+
+        while(t1.data != t2.data){
+            t1 = t1.next;
+            t2 = t2.next;
+        }
+            return t1.data;
+    }
+
     }
 
     // public static void main(String[] args)throws Exception {
@@ -1306,7 +1330,29 @@ public class LearnJavaLL {
     //     sum.display();
     // }
 
+    //Intersection point of a Linkedlist
+    // public static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+    //     int n1 = Integer.parseInt(br.readLine());
+    //     Linkedlist l1 = new Linkedlist();
+    //     String[] values1 = br.readLine().split(" ");
+    //     for(int i = 0; i < n1; i++){
+    //         int d= Integer.parseInt(values1[i]);
+    //         l1.addLast(d);
+    //     }
+        
+    //     int n2 = Integer.parseInt(br.readLine());
+    //     Linkedlist l2 = new Linkedlist();
+    //     String[] values2 = br.readLine().split(" ");
+    //     for(int i = 0; i < n2; i++){
+    //         int d= Integer.parseInt(values2[i]);
+    //         l2.addLast(d);
+    //     }
+
+    //     int sum = Linkedlist.findIntersection(l1,l2);
+    //     System.out.println(sum);
+    // }
 
 
 
