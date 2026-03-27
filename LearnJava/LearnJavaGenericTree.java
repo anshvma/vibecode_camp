@@ -25,6 +25,16 @@ public class LearnJavaGenericTree {
         }
     }
 
+    //size of generic tree
+    public static int size(Node node){
+        int s = 0;
+        for(Node child: node.children){
+            int cs = size(child);
+            s = s + cs;
+        }
+        return s + 1;
+    }
+
     // public static void main(String[] args) throws Exception {
     //     int[] arr = {10, 20, 50, -1, 60, -1, -1, 30, 70, -1, 80, 110, -1, 120, -1, -1, 90, -1, -1, 40, 100, -1, -1, -1};
             
@@ -47,10 +57,9 @@ public class LearnJavaGenericTree {
     //         }
     //     }
     //     display(root);
-        
+    //     System.out.println(size(root));
     // }
 
     
-
 
 }
