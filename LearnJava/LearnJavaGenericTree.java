@@ -87,6 +87,22 @@ public class LearnJavaGenericTree {
         System.out.println("post " + node.data);
     }
 
+    public static void levelOrder(Node node){
+        Queue<Node> q = new ArrayDeque<>();
+        q.add(node);
+
+        while(q.size() > 0){
+            int count = q.size();
+            for(int i = 0; i < count; i++){
+                node = q.remove();
+                System.out.print(node.data + " ");
+                for(Node child: node.children){
+                    q.add(child);
+                }
+            }
+            System.out.print(".");
+        }
+    }
     // public static void main(String[] args) throws Exception {
     //     int[] arr = {10, 20, 50, -1, 60, -1, -1, 30, 70, -1, 80, 110, -1, 120, -1, -1, 90, -1, -1, 40, 100, -1, -1, -1};
             
@@ -142,18 +158,32 @@ public class LearnJavaGenericTree {
     // }
 
     //Transverse of a generic tree
-    public  static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
-        int[] arr = new int[n];
-        String[] values = br.readLine().split(" ");
-        for (int i = 0; i < n; i++) {
-            arr[i] = Integer.parseInt(values[i]);
-        }
+    // public  static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     int n = Integer.parseInt(br.readLine());
+    //     int[] arr = new int[n];
+    //     String[] values = br.readLine().split(" ");
+    //     for (int i = 0; i < n; i++) {
+    //         arr[i] = Integer.parseInt(values[i]);
+    //     }
 
-        Node root = construct(arr);
-        transverse(root);
-    }
+    //     Node root = construct(arr);
+    //     transverse(root);
+    // }
+
+    //Level order traversal of a generic tree
+    // public  static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     int n = Integer.parseInt(br.readLine());
+    //     int[] arr = new int[n];
+    //     String[] values = br.readLine().split(" ");
+    //     for (int i = 0; i < n; i++) {
+    //         arr[i] = Integer.parseInt(values[i]);
+    //     }
+
+    //     Node root = construct(arr);
+    //     levelOrder(root);
+    // }
 
     
 
