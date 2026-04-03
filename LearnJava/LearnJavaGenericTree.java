@@ -103,6 +103,28 @@ public class LearnJavaGenericTree {
             System.out.print(".");
         }
     }
+
+    public static void levelOrderLinewise(Node node){
+        Queue<Node> mq = new ArrayDeque<>();
+        mq.add(node);
+
+        Queue<Node> cq = new ArrayDeque<>();
+
+        while(mq.size() > 0){
+            node = mq.remove();
+            System.out.print(node.data + " ");
+            for(Node child: node.children){
+                cq.add(child);
+            }
+
+            if(mq.size() == 0){
+                mq = cq;
+                cq = new ArrayDeque<>();
+                System.out.println();
+            }
+        }
+    }
+
     // public static void main(String[] args) throws Exception {
     //     int[] arr = {10, 20, 50, -1, 60, -1, -1, 30, 70, -1, 80, 110, -1, 120, -1, -1, 90, -1, -1, 40, 100, -1, -1, -1};
             
@@ -185,7 +207,22 @@ public class LearnJavaGenericTree {
     //     levelOrder(root);
     // }
 
+    //Level order linewise of a generic tree
+    // public  static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     int n = Integer.parseInt(br.readLine());
+    //     int[] arr = new int[n];
+    //     String[] values = br.readLine().split(" ");
+    //     for (int i = 0; i < n; i++) {
+    //         arr[i] = Integer.parseInt(values[i]);
+    //     }
+
+    //     Node root = construct(arr);
+    //     levelOrderLinewise(root);
+    // }
+
     
+
 
 
 
