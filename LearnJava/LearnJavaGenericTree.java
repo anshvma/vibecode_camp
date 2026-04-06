@@ -156,6 +156,13 @@ public class LearnJavaGenericTree {
         }
     }
 
+    public static void mirror(Node node){
+         for(Node child: node.children){
+             mirror(child);
+         }
+         Collections.reverse(node.children);
+     }
+
 
     // public static void main(String[] args) throws Exception {
     //     int[] arr = {10, 20, 50, -1, 60, -1, -1, 30, 70, -1, 80, 110, -1, 120, -1, -1, 90, -1, -1, 40, 100, -1, -1, -1};
@@ -267,7 +274,25 @@ public class LearnJavaGenericTree {
     //     levelOrderzigzag(root);
     //  }
 
+    //mirror of a generic tree
+    //  public  static void main(String[] args) throws Exception {
+    //     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //     int n = Integer.parseInt(br.readLine());
+    //     int[] arr = new int[n];
+    //     String[] values = br.readLine().split(" ");
+    //     for (int i = 0; i < n; i++) {
+    //         arr[i] = Integer.parseInt(values[i]);
+    //     }
+
+    //     Node root = construct(arr);
+    //     mirror(root);
+    //     display(root);
+    //  }
+
     
+
+
+
 
 
 
